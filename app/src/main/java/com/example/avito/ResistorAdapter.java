@@ -27,14 +27,12 @@ public class ResistorAdapter extends RecyclerView.Adapter<ResistorAdapter.Resist
     @Override
     public ResistorViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = inflater.inflate(R.layout.item_layout, parent, false);
-        Log.d("Di", "create");
         return new ResistorViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ResistorAdapter.ResistorViewHolder holder, int position) {
         Resistor resistor = resistorList.get(position);
-        Log.d("Di", "fufufuf");
         holder.resistorResistance.setText(resistor.resistance + "");
     }
 
