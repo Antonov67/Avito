@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         EditText countResistors = findViewById(R.id.count_resistors);
         Button createEmtyListButtom = findViewById(R.id.create_list_button);
         //список
-       RecyclerView listResistors = findViewById(R.id.list_resisors);
+       listResistors = findViewById(R.id.list_resisors);
        listResistors.setLayoutManager(new LinearLayoutManager(this));
 
         context = MainActivity.this;
@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
                     resistorsList.add(new Resistor(0.0f));
                 }
                 //Adapter
-                ResistorAdapter adapter = new ResistorAdapter(context, resistorsList);
+                adapter = new ResistorAdapter(context, resistorsList);
                 listResistors.setAdapter(adapter);
             }
         });
@@ -53,8 +53,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Log.d("Di", "start");
-                Log.d("Di", adapter.getItemCount() + "");
-                Log.d("Di", adapter.getResistorList().get(1).resistance + "36");
+                Log.d("Di", adapter.getItemCount() + "колво");
+
             }
         });
 
