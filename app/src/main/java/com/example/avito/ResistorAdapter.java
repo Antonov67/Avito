@@ -1,6 +1,7 @@
 package com.example.avito;
 
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -31,9 +32,17 @@ public class ResistorAdapter extends RecyclerView.Adapter<ResistorAdapter.Resist
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ResistorAdapter.ResistorViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ResistorAdapter.ResistorViewHolder holder, @SuppressLint("RecyclerView") int position) {
         Resistor resistor = resistorList.get(position);
         holder.resistorResistance.setText(resistor.resistance + "");
+        holder.resistorResistance.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                resistorList.add(position, new Resistor(Float.parseFloat(holder.resistorResistance.getText().toString())));
+                Log.d("Di", holder.resistorResistance.getText().toString());
+                Log.d("Di", resistorList.get(1).resistance + "op");
+            }
+        });
     }
 
     @Override
@@ -41,6 +50,11 @@ public class ResistorAdapter extends RecyclerView.Adapter<ResistorAdapter.Resist
 
         return resistorList.size();
     }
+
+    public List<Resistor> getResistorList(){
+        return resistorList;
+    }
+
 
     public static class ResistorViewHolder extends RecyclerView.ViewHolder {
         final EditText resistorResistance;

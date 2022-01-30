@@ -48,10 +48,13 @@ public class MainActivity extends AppCompatActivity {
         });
 
         Button calcButton = findViewById(R.id.calc_button);
+
         calcButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Log.d("Di", "start");
+                Log.d("Di", adapter.getItemCount() + "");
+                Log.d("Di", adapter.getResistorList().get(1).resistance + "36");
             }
         });
 
