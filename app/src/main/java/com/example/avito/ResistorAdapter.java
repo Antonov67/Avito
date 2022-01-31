@@ -80,14 +80,9 @@ public class ResistorAdapter extends RecyclerView.Adapter<ResistorAdapter.Resist
                 @Override
                 public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
                     if (charSequence.length() != 0){
-                        resistorList.add(getAdapterPosition(),
+                        resistorList.set(getAdapterPosition(),
                                 new Resistor(Float.parseFloat(charSequence.toString()),
                                 "резистор №" + (getAdapterPosition() + 1)));
-                        resistorList.remove(getAdapterPosition() + 1);
-                        Log.d("Di", charSequence + " " + getAdapterPosition());
-                    }
-                    else {
-                        Log.d("Di","null " + getAdapterPosition());
                     }
                 }
 
