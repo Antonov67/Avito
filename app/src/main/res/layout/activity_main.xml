@@ -41,26 +41,29 @@
         android:id="@+id/calc_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="92dp"
         android:text="посчитать"
+
+
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.104"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/list_resisors"
-        app:layout_constraintVertical_bias="0.963" />
+        app:layout_constraintTop_toBottomOf="@+id/count_resistors"
+        app:layout_constraintVertical_bias="0.974" />
 
     <TextView
         android:id="@+id/result_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
+        android:background="@color/black"
         android:text="Результат"
         android:textColor="@color/white"
-        android:background="@color/black"
         android:textSize="35sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
-        app:layout_constraintStart_toEndOf="@+id/calc_button" />
+        app:layout_constraintHorizontal_bias="0.277"
+        app:layout_constraintStart_toEndOf="@+id/calc_button"
+        app:layout_constraintTop_toBottomOf="@+id/create_list_button"
+        app:layout_constraintVertical_bias="0.474" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
