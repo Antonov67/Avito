@@ -1,14 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="15dp">
 
 
+
+    <TextView
+        android:id="@+id/name_resistor"
+        android:text="резистор"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="56dp"
+        android:layout_height="22dp"
+        app:srcCompat="@drawable/resistor" />
 
     <EditText
-    xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/item_resistor"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="numberDecimal"
         android:background="@color/black"
-    android:textColor="@color/white"
-    android:text="Name" />
+        android:textSize="25sp"
+        android:layout_width="wrap_content"
+        android:textColor="@color/white"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+</LinearLayout>
